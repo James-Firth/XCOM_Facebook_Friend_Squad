@@ -131,7 +131,7 @@ namespace XCOM_Facebook_Friend_Squad
             if (System.IO.File.Exists("C:\\Users\\James\\Documents\\Visual Studio 2012\\Projects\\XCOM_Facebook_Friend_Squad\\newFile.txt"))
             {
                 //Then check if there's a backup made
-                if (System.IO.File.Exists("C:\\Users\\James\\Documents\\Visual Studio 2012\\Projects\\XCOM_Facebook_Friend_Squad\\testFile.txt.orig")
+                if (System.IO.File.Exists("C:\\Users\\James\\Documents\\Visual Studio 2012\\Projects\\XCOM_Facebook_Friend_Squad\\testFile.txt.orig"))
                 {
                     //If so simply replace the current file
                 }
