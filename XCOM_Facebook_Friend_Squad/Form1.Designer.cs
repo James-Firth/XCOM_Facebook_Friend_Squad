@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Canada", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("USA", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Canada", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("USA", System.Windows.Forms.HorizontalAlignment.Left);
             this.loginBtn = new System.Windows.Forms.Button();
             this.outputText = new System.Windows.Forms.Label();
             this.friendsList = new System.Windows.Forms.ListView();
@@ -37,6 +37,7 @@
             this.colGender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSaveAll = new System.Windows.Forms.Button();
             this.btnSaveSome = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // loginBtn
@@ -67,13 +68,13 @@
             this.colGender});
             this.friendsList.FullRowSelect = true;
             this.friendsList.GridLines = true;
-            listViewGroup1.Header = "Canada";
-            listViewGroup1.Name = "Canada";
-            listViewGroup2.Header = "USA";
-            listViewGroup2.Name = "USA";
+            listViewGroup3.Header = "Canada";
+            listViewGroup3.Name = "Canada";
+            listViewGroup4.Header = "USA";
+            listViewGroup4.Name = "USA";
             this.friendsList.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
+            listViewGroup3,
+            listViewGroup4});
             this.friendsList.Location = new System.Drawing.Point(40, 51);
             this.friendsList.Name = "friendsList";
             this.friendsList.Size = new System.Drawing.Size(335, 513);
@@ -110,16 +111,28 @@
             this.btnSaveSome.Text = "Save Checked Friends as Soldiers";
             this.btnSaveSome.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(423, 593);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 629);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSaveSome);
             this.Controls.Add(this.btnSaveAll);
             this.Controls.Add(this.friendsList);
             this.Controls.Add(this.outputText);
             this.Controls.Add(this.loginBtn);
+            this.FormClosing += this.MainWindow_FormClosing;
             this.Name = "MainWindow";
             this.Text = "X-COM: FRIENDS KNOWN";
             this.ResumeLayout(false);
@@ -136,6 +149,7 @@
         private System.Windows.Forms.ColumnHeader colGender;
         private System.Windows.Forms.Button btnSaveAll;
         private System.Windows.Forms.Button btnSaveSome;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -1,0 +1,12 @@
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\bin\Release\XCOM_Facebook_Friend_Squad.exe.config
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\bin\Release\XCOM_Facebook_Friend_Squad.exe
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\bin\Release\XCOM_Facebook_Friend_Squad.pdb
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\bin\Release\Facebook.dll
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\bin\Release\Facebook.xml
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\obj\Release\XCOM_Facebook_Friend_Squad.AboutBox1.resources
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\obj\Release\XCOM_Facebook_Friend_Squad.MainWindow.resources
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\obj\Release\XCOM_Facebook_Friend_Squad.LoginForm.resources
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\obj\Release\XCOM_Facebook_Friend_Squad.Properties.Resources.resources
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\obj\Release\XCOM_Facebook_Friend_Squad.csproj.GenerateResource.Cache
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\obj\Release\XCOM_Facebook_Friend_Squad.exe
+C:\Users\James\Documents\Visual Studio 2012\Projects\XCOM_Facebook_Friend_Squad\XCOM_Facebook_Friend_Squad\obj\Release\XCOM_Facebook_Friend_Squad.pdb

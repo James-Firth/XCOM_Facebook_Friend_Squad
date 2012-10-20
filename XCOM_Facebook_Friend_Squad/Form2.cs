@@ -33,11 +33,6 @@ namespace XCOM_Facebook_Friend_Squad
         }
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void authBtn_Click(object sender, EventArgs e)
         {
             if (accessTokenTxtBox.Text == "" || accessTokenTxtBox.Text == null)
@@ -52,5 +47,6 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Hide();
             }
         }
+
     }
 }

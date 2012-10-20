@@ -40,23 +40,25 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Lime;
             this.linkLabel1.Location = new System.Drawing.Point(272, 462);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(107, 13);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Facebook Graph API";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Green;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(241)))), ((int)(((byte)(147)))));
             this.label1.Location = new System.Drawing.Point(200, 327);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(369, 117);
             this.label1.TabIndex = 1;
             this.label1.Text = resources.GetString("label1.Text");
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // accessTokenTxtBox
             // 
@@ -67,12 +69,13 @@
             // 
             // authBtn
             // 
-            this.authBtn.Location = new System.Drawing.Point(275, 514);
+            this.authBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.authBtn.Location = new System.Drawing.Point(275, 504);
             this.authBtn.Name = "authBtn";
-            this.authBtn.Size = new System.Drawing.Size(82, 23);
+            this.authBtn.Size = new System.Drawing.Size(104, 23);
             this.authBtn.TabIndex = 3;
             this.authBtn.Text = "Authenticate!";
-            this.authBtn.UseVisualStyleBackColor = true;
+            this.authBtn.UseVisualStyleBackColor = false;
             this.authBtn.Click += new System.EventHandler(this.authBtn_Click);
             // 
             // pictureBox1
@@ -88,6 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(738, 549);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.authBtn);

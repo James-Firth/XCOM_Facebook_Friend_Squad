@@ -155,5 +155,21 @@ namespace XCOM_Facebook_Friend_Squad
 
             //
         }
+
+        //Closes entire program when this window is closed.
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Close();
+            this.Close();
+        }
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            parent.Close();
+            this.Close();
+            //Application.Exit();
+        }
+
     }
 }
