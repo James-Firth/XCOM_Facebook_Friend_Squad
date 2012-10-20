@@ -1,6 +1,6 @@
 ﻿namespace XCOM_Facebook_Friend_Squad
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -35,22 +35,24 @@
             this.friendsList = new System.Windows.Forms.ListView();
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colGender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnSaveAll = new System.Windows.Forms.Button();
+            this.btnSaveSome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(213, 62);
+            this.loginBtn.Location = new System.Drawing.Point(40, 12);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(75, 23);
+            this.loginBtn.Size = new System.Drawing.Size(91, 33);
             this.loginBtn.TabIndex = 3;
-            this.loginBtn.Text = "Login";
+            this.loginBtn.Text = "Get Friends";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // outputText
             // 
             this.outputText.AutoSize = true;
-            this.outputText.Location = new System.Drawing.Point(65, 258);
+            this.outputText.Location = new System.Drawing.Point(402, 139);
             this.outputText.Name = "outputText";
             this.outputText.Size = new System.Drawing.Size(83, 13);
             this.outputText.TabIndex = 4;
@@ -63,6 +65,8 @@
             this.friendsList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colName,
             this.colGender});
+            this.friendsList.FullRowSelect = true;
+            this.friendsList.GridLines = true;
             listViewGroup1.Header = "Canada";
             listViewGroup1.Name = "Canada";
             listViewGroup2.Header = "USA";
@@ -70,9 +74,9 @@
             this.friendsList.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2});
-            this.friendsList.Location = new System.Drawing.Point(213, 117);
+            this.friendsList.Location = new System.Drawing.Point(40, 51);
             this.friendsList.Name = "friendsList";
-            this.friendsList.Size = new System.Drawing.Size(413, 330);
+            this.friendsList.Size = new System.Drawing.Size(335, 513);
             this.friendsList.TabIndex = 5;
             this.friendsList.UseCompatibleStateImageBehavior = false;
             this.friendsList.View = System.Windows.Forms.View.Details;
@@ -80,20 +84,43 @@
             // colName
             // 
             this.colName.Text = "Name";
+            this.colName.Width = 195;
             // 
             // colGender
             // 
             this.colGender.Text = "Gender";
+            this.colGender.Width = 78;
             // 
-            // Form1
+            // btnSaveAll
+            // 
+            this.btnSaveAll.Location = new System.Drawing.Point(40, 584);
+            this.btnSaveAll.Name = "btnSaveAll";
+            this.btnSaveAll.Size = new System.Drawing.Size(152, 33);
+            this.btnSaveAll.TabIndex = 6;
+            this.btnSaveAll.Text = "Save All Friends as Soldiers";
+            this.btnSaveAll.UseVisualStyleBackColor = true;
+            this.btnSaveAll.Click += new System.EventHandler(this.btnSaveAll_Click);
+            // 
+            // btnSaveSome
+            // 
+            this.btnSaveSome.Location = new System.Drawing.Point(216, 584);
+            this.btnSaveSome.Name = "btnSaveSome";
+            this.btnSaveSome.Size = new System.Drawing.Size(200, 33);
+            this.btnSaveSome.TabIndex = 7;
+            this.btnSaveSome.Text = "Save Checked Friends as Soldiers";
+            this.btnSaveSome.UseVisualStyleBackColor = true;
+            // 
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 659);
+            this.ClientSize = new System.Drawing.Size(540, 629);
+            this.Controls.Add(this.btnSaveSome);
+            this.Controls.Add(this.btnSaveAll);
             this.Controls.Add(this.friendsList);
             this.Controls.Add(this.outputText);
             this.Controls.Add(this.loginBtn);
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.Text = "X-COM: FRIENDS KNOWN";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -107,6 +134,8 @@
         private System.Windows.Forms.ListView friendsList;
         private System.Windows.Forms.ColumnHeader colName;
         private System.Windows.Forms.ColumnHeader colGender;
+        private System.Windows.Forms.Button btnSaveAll;
+        private System.Windows.Forms.Button btnSaveSome;
     }
 }
 

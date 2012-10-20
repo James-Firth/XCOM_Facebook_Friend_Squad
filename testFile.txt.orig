@@ -1,0 +1,7 @@
+            ListViewItem baseItem = new ListViewItem("Bob");
+            ListViewItem.ListViewSubItem temp1 = new ListViewItem.ListViewSubItem(baseItem, "Blah!");
+            ListViewItem.ListViewSubItem temp2 = new ListViewItem.ListViewSubItem(baseItem, "Test");
+
+            int blah = list.Items.Count;
+            list.Items.Add(baseItem);
+            list.Items[0].SubItems.Add(blah.ToString());

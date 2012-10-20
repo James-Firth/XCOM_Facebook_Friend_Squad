@@ -27,6 +27,12 @@ namespace XCOM_Facebook_Friend_Squad
             catch { }
         }
 
+        public void ClearInput()
+        {
+            accessTokenTxtBox.Clear();
+        }
+
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -41,7 +47,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                Form1 mainForm = new Form1();
+                MainWindow mainForm = new MainWindow(accessTokenTxtBox.Text,this); //Sends access token provided to other form
                 mainForm.Show();
                 this.Hide();
             }
