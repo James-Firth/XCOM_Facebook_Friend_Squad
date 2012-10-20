@@ -25,26 +25,30 @@ namespace XCOM_Facebook_Friend_Squad
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            var accessToken = "AAACEdEose0cBABA1GLZAg4rDqwsi61URcErdSRRZBzCfaV4nMAkU01EUwxpz2FtcbHg0wz9jzmXRCw2mZAQZCCnhE7ZA8uEEMe7cd1h9WewZDZD";
+            var accessToken = "AAACEdEose0cBABTv1aRG2HZCVeeCXZCmZAE2xEPZCsesFelhiRSKyKdxC8nSytoT2ZBAH5YlGxwMHjcZC4ToOk9pC3jnV6vIPBZA6EFZBd0ugQZDZD";
             var client = new FacebookClient(accessToken);
             dynamic result = client.Get("me", new { fields = "name,id,friends.name,friends.gender" });
+
+            
             //dynamic me = client.Get("me.FriendList");
             //string myGender = me.gender;
             //string myName = me.name;
             //outputText.Text = myGender + "\n" + myName;
             //dynamic friendslist = me.FriendList;
+
             ListViewItem toAdd = new ListViewItem(result.friends.data[0].name);
-            ListViewItem.ListViewSubItem temp = new ListViewItem.ListViewSubItem(toAdd, "test");
-            ListViewItem.ListViewSubItem temp2 = new ListViewItem.ListViewSubItem(toAdd, "Blah");
-            ListViewItem.ListViewSubItem[] temp3 = {temp,temp2);
-            //toAdd.
+            friendsList.Items.Add(toAdd);
+            friendsList.Items[0].SubItems.Add(result.friends.data[0].gender);
+            friendsList.Items[0].Group = friendsList.Groups[1];
+            
 
             
             //ListViewItem.ListViewSubItem[] toSubAdd = new ListViewItem.ListViewSubItem[2];
             //toSubAdd[0] = result.friends.data[0].gender;
             //toSubAdd[1] = "Canada"; //result.friends.data[1].
             
-            friendDetailsList.Items.Add(toAdd);
+            
+            
 
            // string output = "";
            // while (output != null)
@@ -63,6 +67,15 @@ namespace XCOM_Facebook_Friend_Squad
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("http://google.ca");
+            }
+            catch { }
         }
     }
 }
