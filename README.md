@@ -1,4 +1,6 @@
 X-COM: Friends Known
 ==========================
 
-Allows you to select facebook friends to populate squad names in XCOM: Enemy Unknown
+Gets Friend names from Facebook, then will populate the random soldier name list with friends' names (from appropriate countries).
+
+Still in alpha stages!
