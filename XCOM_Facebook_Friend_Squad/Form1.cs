@@ -171,5 +171,46 @@ namespace XCOM_Facebook_Friend_Squad
             //Application.Exit();
         }
 
+        private void btnSelectAll_Click(object sender, EventArgs e)
+        {
+
+            if (btnSelectAll.Text.Equals("Select All"))
+            {
+                btnSelectAll.Text = "Deselect All";
+                foreach (ListViewItem friend in friendsList.Items)
+                {
+                    friend.Checked = true;
+                }
+            }
+            else
+            {
+                btnSelectAll.Text = "Select All";
+                foreach (ListViewItem friend in friendsList.Items)
+                {
+                    friend.Checked = false;
+                }
+            }
+        }
+
+        private void btnSelectAllFlags_Click(object sender, EventArgs e)
+        {
+            if (btnSelectAllFlags.Text.Equals("Select All Countries"))
+            {
+                btnSelectAllFlags.Text = "Deselect All Countries";
+                foreach (ListViewItem flag in listFlags.Items)
+                {
+                    flag.Checked = true;
+                }
+            }
+            else
+            {
+                btnSelectAllFlags.Text = "Select All Countries";
+                foreach (ListViewItem flag in listFlags.Items)
+                {
+                    flag.Checked = false;
+                }
+            }
+        }
+
     }
 }
