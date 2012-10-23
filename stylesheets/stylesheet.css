@@ -292,18 +292,18 @@ Full-Width Styles
   border-bottom-right-radius: 2px;
 }
 
-#header_wrap {
+/*#header_wrap {
   background: #000000;
   background: -moz-linear-gradient(top, #000000, #000000);
   background: -webkit-linear-gradient(top, #000000, #000000);
   background: -ms-linear-gradient(top, #000000, #000000);
   background: -o-linear-gradient(top, #000000, #000000);
   background: linear-gradient(top, #000000, #000000);
-}
-
-/*#header_wrap .inner {
-  padding: 50px 10px 30px 10px;
 }*/
+
+#header_wrap .inner {
+  padding: 50px 10px 30px 10px;
+}
 
 #project_title {
   margin: 0;
