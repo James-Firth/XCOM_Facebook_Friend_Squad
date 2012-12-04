@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Facebook;
+using System.IO;
 
 namespace XCOM_Facebook_Friend_Squad
 {
@@ -100,10 +101,6 @@ namespace XCOM_Facebook_Friend_Squad
             //outputText.Text = result.friends.data.length();
         }
 
-        private void outputText_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -123,22 +120,36 @@ namespace XCOM_Facebook_Friend_Squad
         {
 
             //Check if the .txt file exists
+            string selectnames = "";
 
+            foreach (ListViewItem friend in friendsList.Items)
+            {
+                if (friend.Checked == true)
+                {
+                    friend.Name = "CHECKED!";
+                    selectnames = selectnames + friend.Name;
+                }
+
+            }
             //Check if the orig is saved as .orig
             //If so replace the current .txt
             
             //Check if the file we want to replace exists.
-            if (System.IO.File.Exists("C:\\Users\\James\\Documents\\Visual Studio 2012\\Projects\\XCOM_Facebook_Friend_Squad\\newFile.txt"))
+            if (System.IO.File.Exists("C:\\Users\\James\\Documents\\Visual Studio 2012\\Projects\\XCOM_Facebook_Friend_Squad\\Resource Files\\newFile.txt"))
             {
                 //Then check if there's a backup made
-                if (System.IO.File.Exists("C:\\Users\\James\\Documents\\Visual Studio 2012\\Projects\\XCOM_Facebook_Friend_Squad\\testFile.txt.orig"))
+                if (System.IO.File.Exists("C:\\Users\\James\\Documents\\Visual Studio 2012\\Projects\\XCOM_Facebook_Friend_Squad\\Resource Files\\\newFile.txt.orig") == false)
                 {
-                    //If so simply replace the current file
+                    //If the backup doesn't exist create it
+                    System.IO.File.Move("C:\\Users\\James\\Documents\\Visual Studio 2012\\Projects\\XCOM_Facebook_Friend_Squad\\Resource Files\\newFile.txt", "C:\\Users\\James\\Documents\\Visual Studio 2012\\Projects\\XCOM_Facebook_Friend_Squad\\Resource Files\\newFile.txt.orig");
+                    
                 }
-                else
-                {
-                    //If not, copy the current as the backup then make a new file
-                }
+
+                //Then we move on to save either way
+                TextWriter tw = new StreamWriter("C:\\Users\\James\\Documents\\Visual Studio 2012\\Projects\\XCOM_Facebook_Friend_Squad\\Resource Files\\newFile.txt");
+                tw.WriteLine(selectnames);
+                tw.Close();
+
 
                 //Code to use for replacing and what not
                 //Copies
@@ -174,9 +185,9 @@ namespace XCOM_Facebook_Friend_Squad
         private void btnSelectAll_Click(object sender, EventArgs e)
         {
 
-            if (btnSelectAll.Text.Equals("Select All"))
+            if (btnSelectAll.Text.Equals("Select All Soldiers"))
             {
-                btnSelectAll.Text = "Deselect All";
+                btnSelectAll.Text = "Deselect All Soldiers";
                 foreach (ListViewItem friend in friendsList.Items)
                 {
                     friend.Checked = true;
@@ -184,7 +195,7 @@ namespace XCOM_Facebook_Friend_Squad
             }
             else
             {
-                btnSelectAll.Text = "Select All";
+                btnSelectAll.Text = "Select All Soldiers";
                 foreach (ListViewItem friend in friendsList.Items)
                 {
                     friend.Checked = false;
